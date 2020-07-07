@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Live de python 129</title>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython.min.js">
+    </script>
+    <script type="text/python">
+      from browser import bind, document, html
+      print('Olá pessoas da live de python')
+
+
+      @bind('button', 'click')
+      def click_btn(event):
+          document <= html.P('Clicado')
+
+    </script>
   </head>
-  <body>
+  <body onload="brython()">
     Olar Mundo
+    <button type="button" name="button">Clica em mim!</button>
   </body>
 </html>
